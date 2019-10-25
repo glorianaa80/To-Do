@@ -1,0 +1,60 @@
+li {
+  list-style: none;
+  margin: 0;
+  padding-bottom: 5%;
+  text-align: center;
+}
+
+ul {
+  margin-top: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.app {
+  width: 100%;
+}
+
+.title {
+  background: linear-gradient( #67076D, #F40838);
+  color: transparent;
+  font-size: 3rem;
+  margin: 0;
+  padding: 46.5px;
+  text-align: center;
+  -webkit-background-clip: text;
+}
+
+.to-do__link {
+  color: #67076D;
+  background-color: transparent;
+  border: transparent;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 5% 0 5% 0;
+  text-decoration: none;
+}
+
+.active {
+  background: linear-gradient( #67076D, #F40838);
+  color: transparent;
+  display: block;
+  width: 300px;
+  -webkit-background-clip: text;
+}
+
+.wapper__links {
+  background-color: #ffffff;
+  height: 760px;
+  width: 400px;
+}
+
+.wapper-form {
+  background-color: #f7f7f7;
+  border-top: 4px solid #F40838 ;
+  width: 100%;
+}
+
+.wapper__to-do {
+  display: flex;
+}
