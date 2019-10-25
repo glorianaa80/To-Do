@@ -18,6 +18,7 @@ class NameForm extends React.Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
+    this.updateInputValue = this.updateInputValue.bind(this);
   }
 
   handleChange(e) {
@@ -32,6 +33,7 @@ class NameForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    this.setState()
   }
 
   openModalHandler = () => {
@@ -46,6 +48,12 @@ class NameForm extends React.Component {
     });
   }
 
+  updateInputValue(e) {
+    this.setState({
+      value : e.target.value
+    })
+    console.log('hola')
+  }
   render() {
     const { task, deadline, time, des } = this.state.newTodo
     return (
@@ -71,6 +79,8 @@ class NameForm extends React.Component {
       </form>
     );
   }
+  
+
 }
 
 export default NameForm;
