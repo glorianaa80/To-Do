@@ -1,6 +1,6 @@
 import React from 'react';
 import './css/app.css';
-import Form from './components/form.js.js'
+import Form from './components/form.js';
 
 function App() {
   return (

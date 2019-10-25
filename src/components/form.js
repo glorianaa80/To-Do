@@ -12,6 +12,7 @@ class NameForm extends React.Component {
         task: '',
         deadline: '',
         time: '',
+        des:''
       },
       isShowing: false
     };
@@ -26,7 +27,6 @@ class NameForm extends React.Component {
         [name]: value
       })
     });
-    console.log(this.setState.newTodo)
   }
 
 
@@ -47,16 +47,17 @@ class NameForm extends React.Component {
   }
 
   render() {
+    const { task, deadline, time, des } = this.state.newTodo
     return (
       <form onSubmit={this.handleSubmit}>
         <label htmlFor="name"> Task Name: </label>
-        <input className="to-do__input" id="name" type="text" name="task" value={this.state.task} onChange={this.handleChange} />
+        <input className="to-do__input" id="name" type="text" name="task" value={task} onChange={this.handleChange} />
         <label htmlFor="deadline"> Deadline: </label>
-        <input className="to-do__input" id="deadline" type="date" name="deadline" value={this.state.deadline} onChange={this.handleChange} />
+        <input className="to-do__input" id="deadline" type="date" name="deadline" value={deadline} onChange={this.handleChange} />
         <label htmlFor="time"> Time / Hour: </label>
-        <input className="to-do__input" id="time" type="time" name="time" value={this.state.time} onChange={this.handleChange} />
+        <input className="to-do__input" id="time" type="time" name="time" value={time} onChange={this.handleChange} />
         <label htmlFor="des"> Task Description: </label>
-        <textarea className="to-do__input to-do__input--ht" id="des" name="des" value={this.state.des} onChange={this.handleChange} />
+        <textarea className="to-do__input to-do__input--ht" id="des" name="des" value={des} onChange={this.handleChange} />
         <div>
           {this.state.isShowing ? <div onClick={this.closeModalHandler}></div> : null}
           <button type="submit" className="submit-btn btn-2 open-modal-btn" onClick={this.openModalHandler}>Create Task</button>
