@@ -33,7 +33,6 @@ class NameForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.setState()
   }
 
   openModalHandler = () => {

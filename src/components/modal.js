@@ -16,8 +16,8 @@ const modal = (props) => {
           <p>You have done a new task you want to save it</p>
         </div>
         <div className="modal-footer">
-          <button className="btn-cancel" onClick={props.close}>show tasks</button>
-          <button className="btn-save">add other task</button>
+          <button className="btn-cancel" onClick={props.close}>add other task</button>
+          <button className="btn-save">show tasks</button>
         </div>
       </div>
     </div>
