@@ -12,7 +12,7 @@ class NameForm extends React.Component {
         task: '',
         deadline: '',
         time: '',
-        des:''
+        des: ''
       },
       isShowing: false
     };
@@ -22,12 +22,13 @@ class NameForm extends React.Component {
   }
 
   handleChange(e) {
-    const { name, value } = e.target;
+    const { name, value } = e.target;    
     this.setState({
       newTodo: Object.assign({}, this.state.newTodo, {
         [name]: value
       })
     });
+
   }
 
 
@@ -49,7 +50,7 @@ class NameForm extends React.Component {
 
   updateInputValue(e) {
     this.setState({
-      value : e.target.value
+      value: e.target.value
     })
     console.log('hola')
   }
@@ -65,20 +66,17 @@ class NameForm extends React.Component {
         <input className="to-do__input" id="time" type="time" name="time" value={time} onChange={this.handleChange} />
         <label htmlFor="des"> Task Description: </label>
         <textarea className="to-do__input to-do__input--ht" id="des" name="des" value={des} onChange={this.handleChange} />
-        <div>
-          {this.state.isShowing ? <div onClick={this.closeModalHandler}></div> : null}
-          <button type="submit" className="submit-btn btn-2 open-modal-btn" onClick={this.openModalHandler}>Create Task</button>
-          <Modal
-            className="modal"
-            show={this.state.isShowing}
-            close={this.closeModalHandler}>
-          </Modal>
-        </div>
-
+        {this.state.isShowing ? <div onClick={this.closeModalHandler}></div> : null}
+        <button type="submit" className="submit-btn btn-2 open-modal-btn" onClick={this.openModalHandler}>Create Task</button>
+        <Modal
+          className="modal"
+          show={this.state.isShowing}
+          close={this.closeModalHandler}>
+        </Modal>
       </form>
     );
   }
-  
+
 
 }
 
