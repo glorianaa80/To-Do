@@ -12,7 +12,7 @@ const modal = (props) => {
         <span className="close-modal-btn" onClick={props.close}>×</span>
       </div>
       <div className="modal-body">
-        <p>You have done a new task you want to save it</p>
+        <p>your homework has been added</p>
       </div>
       <div className="modal-footer">
         <button className="btn-cancel" onClick={props.close}>add other task</button>
